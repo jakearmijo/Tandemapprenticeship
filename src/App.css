@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+/* Nav Bar Component: */
+
+#navbar {
+  background-color: black;
+  opacity: 75%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 75px;
+  z-index: 3;
+  font-size: 20px;
+}
+
+#home-links {
+  position: absolute;
+}
+
+#home-nav {
+  display: flex;
+  align-items: center;
+  flex-basis: 250px;
+  padding-left: 20px;
+}
+
+#navbar a:active {
+  font-size: 41px;
+}
+
+#navbar a:hover {
+  color: lightcoral;
+}
+
+#nav {
+  display: flex;
+  flex-basis: 250px;
+  justify-content: space-around;
+  align-items: center;
+}
