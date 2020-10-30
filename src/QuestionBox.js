@@ -23,11 +23,13 @@ const Container = styled.div`
 
 export default function QuestionBox({ question, incorrect, selected }) {
   const [answer, setAnswer] = useState(incorrect);
+  console.log("incorrectQBOX", incorrect);
+  console.log("answerQBOX", answer);
   return (
     <div className="questionBox">
       <div className="question">
         {question}
-        {answer.map((text, index) => (
+        {incorrect.map((text, index) => (
           <Container key={index}>
             <Button
               primary
