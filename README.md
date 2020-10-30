@@ -4,6 +4,13 @@ Good Evening and Welcome to Bamboozled. I am your host Jake Armijo. It is a hono
 
 Let's have our First contestant step right up.
 
+$ git clone https://github.com/jakearmijo/Tandemapprenticeship.git
+$ cd tandemapp
+$ npm install
+$ npm start
+
+Visit localhost:3000 to play!
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -11,10 +18,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Open [http://localhost:3000]to view it in the browser.
 
 ### `npm test`
 
