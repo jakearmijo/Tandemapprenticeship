@@ -32,7 +32,7 @@ class App extends React.Component {
     }
     this.setState({
       questionCount:
-        this.state.questionCount < 21 ? this.state.questionCount + 1 : 21,
+        this.state.questionCount < 20 ? this.state.questionCount + 1 : 20,
     });
   };
   render() {
@@ -47,7 +47,7 @@ class App extends React.Component {
         </header>
         <div>
           {this.state.questions.length > 0 &&
-            this.state.questionCount < 21 &&
+            this.state.questionCount < 20 &&
             this.state.questions.map(
               ({ question, incorrect, correct, questionId }) => (
                 <QuestionBox
@@ -59,7 +59,7 @@ class App extends React.Component {
                 />
               )
             )}
-          {this.state.questionCount === 21 ? (
+          {this.state.questionCount === 20 ? (
             <div>
               <h1>USER SCORE</h1>
               <h2>{this.state.score}</h2>

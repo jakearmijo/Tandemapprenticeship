@@ -3,7 +3,7 @@ const questionBank = [
     question: "What was Tandem previous name?",
     incorrect: ["Tandem", "Devmynd", "Burger Shack", "Extraordinary Humans"],
     correct: "Devmynd",
-    questionId: 1,
+    questionId: 0,
   },
   {
     question:
@@ -15,37 +15,37 @@ const questionBank = [
       "Et tu, Brute?",
     ],
     correct: "Et tu, Brute?",
-    questionId: 2,
+    questionId: 1,
   },
   {
     question: "A group of tigers are referred to as:",
     incorrect: ["Chowder", "Ambush", "Pride", "Destruction"],
     correct: "Ambush",
-    questionId: 3,
+    questionId: 2,
   },
   {
     question: "What is the top speed an average cat can travel?",
     incorrect: ["42 mph", "31 mph", "13 mph", "9 mph"],
     correct: "31 mph",
-    questionId: 4,
+    questionId: 3,
   },
   {
     question: "A cat can jump to _____ times its own height:",
     incorrect: ["5", "3", "9", "7"],
     correct: "5",
-    questionId: 5,
+    questionId: 4,
   },
   {
     question: "What is the only letter that doesn't appear in a US state name?",
     incorrect: ["M", "Z", "Q", "X"],
     correct: "Q",
-    questionId: 6,
+    questionId: 5,
   },
   {
     question: "What is the name for a cow-bison hybrid?",
     incorrect: ["Cowson", "Beefalo", "Bicow", "Mooson"],
     correct: "Beefalo",
-    questionId: 7,
+    questionId: 6,
   },
   {
     question: "What is the largest freshwater lake in the world?",
@@ -56,7 +56,7 @@ const questionBank = [
       "Lake Victoria",
     ],
     correct: "Lake Superior",
-    questionId: 8,
+    questionId: 7,
   },
 
   {
@@ -68,75 +68,75 @@ const questionBank = [
       "War World Web",
     ],
     correct: "World Wide Web",
-    questionId: 9,
+    questionId: 8,
   },
   {
     question:
       "In a game of bingo, what number is represented by the name two little ducks?",
     incorrect: ["20", "55", "22", "77"],
     correct: "22",
-    questionId: 10,
+    questionId: 9,
   },
   {
     question: "According to Greek mythology, who was the first woman on Earth?",
     incorrect: ["Pandora", "Lilith", "Eve", "Hera"],
     correct: "Pandora",
-    questionId: 11,
+    questionId: 10,
   },
   {
     question: "In which European city would you find Orly airport?",
     incorrect: ["London", "Belgium", "Munich", "Paris"],
     correct: "Paris",
-    questionId: 12,
+    questionId: 11,
   },
   {
     question: "Where would you find the Sea of Tranquility?",
     incorrect: ["California", "The Moon", "Siberia", "China"],
     correct: "The Moon",
-    questionId: 13,
+    questionId: 12,
   },
   {
     question: "Which artist painted 'Girl with a Pearl Earrin'?",
     incorrect: ["Vermeer", "Van Gogh", "Picasso", "Da Vinci"],
     correct: "Vermeer",
-    questionId: 14,
+    questionId: 13,
   },
   {
     question: "What is the official name for the 'hashtag' symbol?",
     incorrect: ["Number sign", "Hash Sign", "Octothorpe", "Pound"],
     correct: "Octothorpe",
-    questionId: 15,
+    questionId: 14,
   },
   {
     question: "Not American at all, where is apple pie from?",
     incorrect: ["Japan", "England", "Ethiopia", "Canada"],
     correct: "England",
-    questionId: 16,
+    questionId: 15,
   },
   {
     question: "What is the national animal of Scotland?",
     incorrect: ["Bear", "Rabbit", "Seal", "Unicorn"],
     correct: "Unicorn",
-    questionId: 17,
+    questionId: 16,
   },
   {
     question:
       "Where in the world is the only place where Canada is *due south*",
     incorrect: ["Alaska", "Russia", "Detroit", "Washington"],
     correct: "Detroit",
-    questionId: 18,
+    questionId: 17,
   },
   {
     question: "Approximately how many grapes go into a bottle of wine?",
     incorrect: ["700", "500", "200", "1000"],
     correct: "700",
-    questionId: 19,
+    questionId: 18,
   },
   {
     question: "How much does a US One Dollar Bill cost to make?",
     incorrect: ["$0.25", "$1", "$0.05", "$5"],
     correct: "$0.05",
-    questionId: 20,
+    questionId: 19,
   },
   {
     question:
@@ -148,11 +148,11 @@ const questionBank = [
       "Purchase indulgences",
     ],
     correct: "Perform transactions in Latin",
-    questionId: 21,
+    questionId: 20,
   },
 ];
 
-const theQuestionsBankExport = (n = 21) =>
+const theQuestionsBankExport = (n = 20) =>
   Promise.resolve(questionBank.sort(() => 0.5 - Math.random()).slice(0, n));
 
 export default theQuestionsBankExport;

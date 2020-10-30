@@ -28,10 +28,9 @@ export default function QuestionBox({ question, incorrect, selected }) {
       <div className="question">
         {question}
         {answer.map((text, index) => (
-          <Container>
+          <Container key={index}>
             <Button
               primary
-              key={index}
               onClick={() => {
                 setAnswer([text]);
                 selected(text);
