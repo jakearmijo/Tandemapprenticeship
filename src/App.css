@@ -3,8 +3,11 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
+  width: 30vmin;
   pointer-events: none;
+  z-index: +3;
+  padding: 6rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,8 +17,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: lightcoral;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +43,7 @@
 /* Nav Bar Component: */
 
 #navbar {
-  background-color: black;
+  background-color: #98bfad;
   opacity: 75%;
   display: flex;
   justify-content: space-between;
@@ -74,4 +77,9 @@
   flex-basis: 250px;
   justify-content: space-around;
   align-items: center;
+}
+
+.question {
+  border-image-source: url(friendsDoorFrame.png);
+  border-radius: 5rem;
 }

@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Bamboozled",
+  "name": "Bamboozled",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ficons8.com%2Ficon%2F24871%2Ffriends&psig=AOvVaw0-uRB0JJIhsIGu-GTx2Dmv&ust=1604071206957000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDk646N2uwCFQAAAAAdAAAAABAD",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },

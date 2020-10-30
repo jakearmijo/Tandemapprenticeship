@@ -13,6 +13,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "sequelize": "^6.3.5",
+    "styled-components": "^5.2.0",
     "volleyball": "^1.5.1",
     "web-vitals": "^0.2.4"
   },
