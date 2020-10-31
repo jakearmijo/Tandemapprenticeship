@@ -80,6 +80,17 @@
 }
 
 .question {
-  border-image-source: url(/Users/jake/CodingCentral/tandemapp/src/friendsDoorFrame.png);
-  border-radius: 5rem;
+  border-image-source: url(friendsDoorFrame.png);
+  border-image-slice: 85;
+  border-width: 150px;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+.userscore {
+  color: #e85332;
+}
+
+.showAnswer {
+  color: rgb(255, 0, 0);
 }
