@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import questionBank from "./questionBank";
 import QuestionBox from "./QuestionBox";
 import AllQuestions from "./AllQuestions";
+// import { theQuestionBank } from "../Apprentice_TandemFor400_Data.json";
 
 class App extends React.Component {
   state = {
@@ -20,6 +21,10 @@ class App extends React.Component {
         questions: question,
       });
     });
+    // const questionBank = JSON.parse(theQuestionsBankExport);
+    // this.setState({
+    //   questions: questionBank,
+    // });
   };
 
   componentDidMount() {
@@ -58,26 +63,34 @@ class App extends React.Component {
           )}
           <div className="userscore">
             {this.state.score && this.state.questionCount === 10 ? (
-              <h1>User Score: {this.state.score + 1}</h1>
+              <h1>Bamboozled Score: {this.state.score + 1}</h1>
             ) : (
-              <h1>User Score: {this.state.score}</h1>
+              <h1>Bamboozled Score: {this.state.score}</h1>
             )}
           </div>
-          {this.state.questions[this.state.questionCount] ? (
-            <QuestionBox
-              key={this.state.questionCount}
-              question={this.state.questions[this.state.questionCount].question}
-              incorrect={
-                this.state.questions[this.state.questionCount].incorrect
-              }
-              correct={this.state.questions[this.state.questionCount].correct}
-              selected={(answer) =>
-                this.selectedAnswer(
-                  answer,
-                  this.state.questions[this.state.questionCount].correct
-                )
-              }
-            />
+          {this.state.questionCount < 10 ? (
+            <div>
+              {this.state.questions[this.state.questionCount] ? (
+                <QuestionBox
+                  key={this.state.questionCount}
+                  question={
+                    this.state.questions[this.state.questionCount].question
+                  }
+                  incorrect={
+                    this.state.questions[this.state.questionCount].incorrect
+                  }
+                  correct={
+                    this.state.questions[this.state.questionCount].correct
+                  }
+                  selected={(answer) =>
+                    this.selectedAnswer(
+                      answer,
+                      this.state.questions[this.state.questionCount].correct
+                    )
+                  }
+                />
+              ) : null}
+            </div>
           ) : null}
 
           {this.state.questionCount === 10 ? (

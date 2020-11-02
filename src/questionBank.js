@@ -152,7 +152,7 @@ const questionBank = [
   },
 ];
 
-const theQuestionsBankExport = (n = 10) =>
+const theQuestionsBankExport = (n = 20) =>
   Promise.resolve(questionBank.sort(() => 0.5 - Math.random()).slice(0, n));
 
 export default theQuestionsBankExport;
