@@ -13,6 +13,13 @@ class App extends React.Component {
     score: 0,
     questionCount: 1,
     showAnswer: "",
+    displayQuestions: false,
+  };
+
+  displayQuestion = () => {
+    this.setState({
+      displayQuestions: !this.state.displayQuestions,
+    });
   };
 
   setQuestions = () => {
@@ -48,6 +55,7 @@ class App extends React.Component {
     });
   };
   render() {
+    const theQuestionCount = this.state.questionCount;
     return (
       <div className="App">
         <header className="App-header">
@@ -56,36 +64,30 @@ class App extends React.Component {
           </Router>
         </header>
         <div>
-          {this.state.questionCount < 10 ? (
-            <h1>Question# {this.state.questionCount}</h1>
+          {theQuestionCount < 10 ? (
+            <h1>Question# {theQuestionCount}</h1>
           ) : (
             <h1>GAME OVER</h1>
           )}
           <div className="userscore">
-            {this.state.score && this.state.questionCount === 10 ? (
+            {this.state.score && theQuestionCount === 10 ? (
               <h1>Bamboozled Score: {this.state.score + 1}</h1>
             ) : (
               <h1>Bamboozled Score: {this.state.score}</h1>
             )}
           </div>
-          {this.state.questionCount < 10 ? (
+          {theQuestionCount < 10 ? (
             <div>
-              {this.state.questions[this.state.questionCount] ? (
+              {this.state.questions[theQuestionCount] ? (
                 <QuestionBox
-                  key={this.state.questionCount}
-                  question={
-                    this.state.questions[this.state.questionCount].question
-                  }
-                  incorrect={
-                    this.state.questions[this.state.questionCount].incorrect
-                  }
-                  correct={
-                    this.state.questions[this.state.questionCount].correct
-                  }
+                  key={theQuestionCount}
+                  question={this.state.questions[theQuestionCount].question}
+                  incorrect={this.state.questions[theQuestionCount].incorrect}
+                  correct={this.state.questions[theQuestionCount].correct}
                   selected={(answer) =>
                     this.selectedAnswer(
                       answer,
-                      this.state.questions[this.state.questionCount].correct
+                      this.state.questions[theQuestionCount].correct
                     )
                   }
                 />
@@ -93,7 +95,7 @@ class App extends React.Component {
             </div>
           ) : null}
 
-          {this.state.questionCount === 10 ? (
+          {theQuestionCount === 10 ? (
             <div>
               <img
                 src="https://cdn3.whatculture.com/images/2019/10/cd5d7dd0451193b6-600x338.jpg"
@@ -113,8 +115,18 @@ class App extends React.Component {
         </div>
 
         <div>
-          <h5>ALL the Questions</h5>
-          <AllQuestions questions={this.state.questions} />
+          <button onClick={this.displayQuestion}>
+            CLICK ME TO SEE ALL QUESTIONS
+          </button>
+          {this.state.displayQuestions === false ? null : (
+            <div>
+              <h5>ALL the Questions</h5>
+              <AllQuestions
+                data-testid="all-questions-test"
+                questions={this.state.questions}
+              />
+            </div>
+          )}
         </div>
       </div>
     );
