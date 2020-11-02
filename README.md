@@ -39,5 +39,6 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 • Firstly I would have spent more time on testing. I know that it is important and I just dove into the code to create as much as I could. JEST seems to be really unique and effective.
 • Complete a back end to have more questions and maybe allow users to submit their own questions for approval and use.
-• Styling. I would like to look more sleek and sexy.
-• Top / fasest scores. Since there are only 20 it be cool to see how fast a user could get as many correct in the shorest amount of time.
+• Styling. I would like the app to look more sleek and sexy.
+• Top / fasest scores. Since there are only 10 question it would be cool to see how fast a user could get as many correct in the shorest amount of time.
+• Display the top users with the highest scores
