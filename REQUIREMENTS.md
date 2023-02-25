@@ -1,10 +1,10 @@
-## Requirements
+# Requirements
 
 The requirements below
 
 <details>
 
-#### Frontend
+## Frontend
 
 - [x] A user can view questions.
 - [x] Questions with their multiple choice options must be displayed one at a time.
@@ -13,7 +13,7 @@ The requirements below
 - [x] The correct answer must be revealed after a user has submitted their answer
 - [x] A user can see the score they received at the end of the round
 
-#### Backend
+## Backend
 
 - [ ] Write a route to serve up all questions
 - [ ] Write a route to serve up a single question
